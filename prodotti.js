@@ -35,7 +35,7 @@ var priceRange = document.getElementById('priceRange');
       "prezzo": 10.00,
       "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
       "immagine": "https://via.placeholder.com/600x400",
-     "categoria": "xxxx"
+     "categoria": "dal Giappone"
     },
     {
       "id": 2,
@@ -59,7 +59,7 @@ var priceRange = document.getElementById('priceRange');
      let html = "";
       for (var i = 0; i < products.length; i++) {
         var productPrice = products[i].prezzo;
-        var categoryMatch = selectedCategory === 'tutti' || products[i].categoria.contains(selectedCategory);
+        var categoryMatch = selectedCategory === 'tutti' || products[i].categoria=(selectedCategory);
         var priceMatch = productPrice <= priceRangeValue;
 
         if (categoryMatch && priceMatch) {
