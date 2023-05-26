@@ -59,7 +59,7 @@ var priceRange = document.getElementById('priceRange');
      let html = "";
       for (var i = 0; i < products.length; i++) {
         var productPrice = products[i].prezzo;
-        var categoryMatch = selectedCategory === 'tutti' || products[i].categoria=selectedCategory;
+        var categoryMatch = selectedCategory === 'tutti' || products[i].categoria==selectedCategory;
         var priceMatch = productPrice <= priceRangeValue;
 
         if (categoryMatch && priceMatch) {
