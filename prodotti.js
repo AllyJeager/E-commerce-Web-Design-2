@@ -26,17 +26,45 @@ var priceRange = document.getElementById('priceRange');
     function filterProducts() {
       var selectedCategory = document.getElementById('categoryDropdown').value;
       var priceRangeValue = document.getElementById('priceRange').value;
-      var products = document.getElementsByClassName('product');
+      //var products = document.getElementsByClassName('product');
+     
+     // Elenco prodotti
+    let products = [{
+      "id": 1,
+      "nome": "Prodotto 1",
+      "prezzo": 10.00,
+      "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
+      "immagine": "https://via.placeholder.com/600x400",
+     "categoria": "xxxx"
+    },
+    {
+      "id": 2,
+      "nome": "Prodotto 2",
+      "prezzo": 20.00,
+      "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
+      "immagine": "https://via.placeholder.com/600x400",
+     "categoria": "xxxx"
+    },
+    {
+      "id": 3,
+      "nome": "Prodotto 3",
+      "prezzo": 30.00,
+      "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
+      "immagine": "https://via.placeholder.com/600x400",
+     "categoria": "xxxx"
+    }
+    ];
+     
 
+     let html = "";
       for (var i = 0; i < products.length; i++) {
-        var productPrice = parseInt(products[i].getAttribute('data-price'));
-        var categoryMatch = selectedCategory === 'tutti' || products[i].classList.contains(selectedCategory);
+        var productPrice = products[i].prezzo;
+        var categoryMatch = selectedCategory === 'tutti' || products[i].categoria.contains(selectedCategory);
         var priceMatch = productPrice <= priceRangeValue;
 
         if (categoryMatch && priceMatch) {
-          products[i].style.display = 'block';
-        } else {
-          products[i].style.display = 'none';
+          html += " divxxx ";
         }
       }
+     document.getElementById("rigacontenutore").innerHTML = html;
     }
