@@ -43,7 +43,7 @@ var priceRange = document.getElementById('priceRange');
       "prezzo": 20.00,
       "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
       "immagine": "https://via.placeholder.com/600x400",
-     "categoria": "xxxx"
+     "categoria": "Shounen"
     },
     {
       "id": 3,
@@ -51,7 +51,7 @@ var priceRange = document.getElementById('priceRange');
       "prezzo": 30.00,
       "descrizione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lacus nec ante sagittis ultrices vel vitae justo. Fusce at erat neque. Nunc ultrices risus sed sapien faucibus, a elementum nibh vestibulum. Sed ut metus nulla. Nulla in nisi in elit consectetur mollis. ",
       "immagine": "https://via.placeholder.com/600x400",
-     "categoria": "xxxx"
+     "categoria": "Seinen"
     }
     ];
      
