@@ -1,4 +1,11 @@
- /*Navbar*/
+ /*spedizione*/
+.free-shipping-banner{
+  text-align: center;
+  background-color:#e52421;
+  color: #fff;
+  height:30px ;
+}
+/*Navbar*/
 .custom-navbar .navbar-nav .nav-link {
   color:gray; /* Colore del testo dei link */
 }
