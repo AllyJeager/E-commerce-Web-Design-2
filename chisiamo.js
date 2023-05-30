@@ -1,4 +1,4 @@
-// Ottieni i riferimenti agli elementi del DOM
+ // Ottieni i riferimenti agli elementi del DOM
  const searchIcon = document.getElementById('search-icon');
  const searchInput = document.querySelector('.search-input');
 
@@ -14,3 +14,8 @@
      searchInput.focus(); // Facoltativo: mette il focus sul campo di input
    }
  });
+
+//scrolltop
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
