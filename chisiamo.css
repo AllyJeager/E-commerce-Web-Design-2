@@ -1,3 +1,4 @@
+
 /*Navbar*/
 .custom-navbar .navbar-nav .nav-link {
   color:gray; /* Colore del testo dei link */
@@ -48,65 +49,69 @@
     display: none;
   }
 }
-/*swiper*/
-.mySwiper1{
-  width: 100% !important;
+/*Card testo*/
+.card {
+  width:80%;
+  margin:auto;
+  margin-bottom: 20px!important;
+  margin-top: 30px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #ccc;
 }
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-/*swiper2*/
- .mySwiper2 {
-    width: 60%;
-    height: 100%;
+.card:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
-  .swiper-slide img {
-    display: block;
+
+/*Team card*/
+.team-card:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.team-section {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px !important;
+}
+
+.team-card {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-card img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .team-card {
     width: 100%;
-    height: 100%;
-
   }
-  .swiper-slide {
-    text-align: center;
-    display:block;
-  }
-  .swiper-pagination2  {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    }
- .nome{
-  height:50x !important;
-  display: block;      
-  overflow:hidden;
- } 
-.cluster {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+}
+  /*Footer*/
+  footer {
+    position:absolute;
+    color: white;
+    width: 100%;
+    height: 2.5rem; 
 }
 #logo{
+
   width: 150px;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 20px;
 }
 
-footer {
-    position:absolute;
-    color: white;
-    width: 100%;
-    height: 2.5rem; 
-}
-#copyright{
-  background-color: darkred;
-  color: #fff;
-  opacity: 85%;
+h2{
+  text-align: center;
 }
 
 /*scrolltop*/
