@@ -61,4 +61,19 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  var cookieBanner = document.getElementById('cookie-banner');
+  var cookieAccept = document.getElementById('cookie-accept');
+
+  cookieAccept.addEventListener('click', function() {
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookieConsent', 'true');
+  });
+
+  if (!localStorage.getItem('cookieConsent')) {
+      cookieBanner.style.display = 'block';
+  }
+});
+
  
