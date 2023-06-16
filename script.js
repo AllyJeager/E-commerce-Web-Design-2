@@ -158,7 +158,7 @@ if (document.getElementById ("priceRange")!=null) {
              </div>`;
    }
    
-   document.getElementById("rigacontenutore").innerHTML = html;
+   document.getElementById("rigacontenitore").innerHTML = html;
 }
 
 
