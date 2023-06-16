@@ -145,6 +145,7 @@ if (document.getElementById ("priceRange")!=null) {
    let html = "";
    for (var i = 0; i < products.length; i++) {
      var product = products[i];
+     if( product.price <= parseFloat  ( priceRangeValue ) ) {
      html += `<div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
                  <div class="product ${product.categoria}" data-price="${product.prezzo}">
                      <img class="prodottoimg" alt="place" src="${product.immagine}">
@@ -156,6 +157,7 @@ if (document.getElementById ("priceRange")!=null) {
                      </div>
                  </div>
              </div>`;
+   }
    }
    
    document.getElementById("rigacontenitore").innerHTML = html;
