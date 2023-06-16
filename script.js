@@ -67,6 +67,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     }
   });
   //messaggio inviato
+if ( document.getElementById ("contact-form")!=null) {
   document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Previeni l'invio del modulo
     var checkboxChecked = document.getElementById("myCheck").checked;
@@ -79,6 +80,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
       document.getElementById("confirmation-message").style.display = "block";
     }
   });
+}
 
   // pagina prodotti con filtro
 
