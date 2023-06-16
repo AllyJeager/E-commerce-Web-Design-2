@@ -83,13 +83,14 @@ if (document.getElementById ("contact-form")!=null) {
 }
 
   // pagina prodotti con filtro
-
+if (document.getElementById ("priceRange")!=null) {
   var priceRange = document.getElementById('priceRange');
    var priceDisplay = document.getElementById('priceDisplay');
 
    priceRange.oninput = function() {
      priceDisplay.innerHTML = '€' + priceRange.value;
    };
+}
 
    function filterProducts() {
      var selectedCategory = document.getElementById('categoryDropdown').value;
