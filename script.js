@@ -176,3 +176,4 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!localStorage.getItem('cookieConsent')) {
         cookieBanner.style.display = 'block';
     }
+});
