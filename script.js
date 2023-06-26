@@ -133,7 +133,7 @@ if (document.getElementById("contact-form") != null) {
     });
 }
 
-// pagina prodotti con filtro
+// filtro
 if (document.getElementById("priceRange") != null) {
   var priceRange = document.getElementById("priceRange");
   var priceDisplay = document.getElementById("priceDisplay");
@@ -146,8 +146,7 @@ if (document.getElementById("priceRange") != null) {
 function filterProducts() {
   var selectedCategory = document.getElementById("categoryDropdown").value;
   var priceRangeValue = document.getElementById("priceRange").value;
-  //var products = document.getElementsByClassName('product');
-
+// prodotti dinamici
   let html = "";
   for (var i = 0; i < products.length; i++) {
     var product = products[i];
@@ -239,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
+// prodotti dinamici home
   html = "";
   products.forEach((product) => {
     html += `

@@ -111,9 +111,8 @@ footer {
     height: 2.5rem; 
 }
 #copyright{
-  background-color: darkred;
+  background-color:#e52421;
   color: #fff;
-  opacity: 85%;
 }
 
 /*scrolltop*/
@@ -147,12 +146,12 @@ footer {
 }
 
 .cookie-banner a {
-  color: #007bff;
+  color: #e52421;
   text-decoration: none;
 }
 
 .cookie-banner button {
-  background-color: #007bff;
+  background-color: #e52421;
   color: #fff;
   border: none;
   padding: 8px 20px;
