@@ -87,8 +87,9 @@
       margin-top: 30px;
       margin-bottom: 20px;
       }
+/*index*/
 .nome{
-    height:60px;
+    height:50px;
     display: block;      
     overflow:hidden;
    } 
@@ -137,12 +138,13 @@ footer {
     background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
+    z-index:1;
   }
 .cookie-banner p {
     margin: 0;
   }
   
-  .cookie-banner a {
+.cookie-banner a {
     color: #e52421;
     text-decoration: none;
   }
@@ -155,7 +157,7 @@ footer {
     cursor: pointer;
   }
 /*Chi siamo*/
-.card {
+#chisiamo.card {
     width:80%;
     margin:auto;
     margin-bottom: 20px!important;
