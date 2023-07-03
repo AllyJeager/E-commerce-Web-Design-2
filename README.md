@@ -17,6 +17,6 @@ Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il 
 # Homepage slider
 Nella homepage sono presenti degli slider provenienti dalle demo di [Swiper](https://swiperjs.com/demos)
 <!-- style:"
-img{
+GPT{
 height:20px;
 }--!>
