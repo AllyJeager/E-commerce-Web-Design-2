@@ -5,13 +5,14 @@ Il repository è pubblicato a questo indirizzo: https://mangacommerce.netlify.ap
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2b4e246c-0c18-443c-b2f4-bb624da1eb4b/deploy-status)](https://app.netlify.com/sites/mangacommerce/deploys)
 
-#STRUMENTO PER LA PROGRAAMMAZIONE
+---
+# STRUMENTO PER LA PROGRAAMMAZIONE
 
 ![VSC](/immagini/readme/app-icon.png)
 
 <!-- style: "img{
 height:20px;
 }" --!>
-
+---
 # HOMEPAGE SLIDER
 Nella homepage sono presenti degli slider provenienti dalle demo di [Swiper](https://swiperjs.com/demos)
