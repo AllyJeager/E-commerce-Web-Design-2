@@ -1,7 +1,4 @@
-<!-- style:"
-img{
-height:20px;
-}--!>
+
 # E-commerce Web Design 2
 Costruzione sito multi pagina di un e-commerce di manga come progetto d'esame per il corso di Web Design2, utilizzando le competenze acquisite in precedenza su HTML, CSS e Javascript.
 
@@ -19,3 +16,7 @@ Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il 
 ![GPT](/immagini/readme/chatgpt.png)
 # Homepage slider
 Nella homepage sono presenti degli slider provenienti dalle demo di [Swiper](https://swiperjs.com/demos)
+<!-- style:"
+img{
+height:20px;
+}--!>
