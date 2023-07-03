@@ -13,10 +13,7 @@ Il repository è pubblicato a questo indirizzo: https://mangacommerce.netlify.ap
 #### Il perchè della scelta
 Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il mio repository di GitHub localmente, grazie ad esso quando attuavo una modifica localmente potevo poi aggiornare il repositery online. In questo modo **potevo programmare tranquillamente offline** e successivamente aggiornare il tutto
 # AI come supporto
-![GPT](/immagini/readme/chatgpt.png)
+[![GPT](/immagini/readme/chatgpt.png)](https://openai.com/blog/chatgpt)
+
 # Homepage slider
 Nella homepage sono presenti degli slider provenienti dalle demo di [Swiper](https://swiperjs.com/demos)
-<!-- style:"
-GPT{
-height:20px;
-}--!>
