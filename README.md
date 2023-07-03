@@ -7,8 +7,7 @@ Il repository è pubblicato a questo indirizzo: https://mangacommerce.netlify.ap
 
 
 # Strumento per la programmazione
-![VSC](/immagini/readme/app-icon.png) 
-Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il mio repository di GitHub localmente, grazie ad esso quando attuavo una modifica localmente potevo poi aggiornare il repositery online. In questo modo **potevo programmare tranquillamente offline** e successivamente aggiornare il tutto
+![VSC](/immagini/readme/app-icon.png) Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il mio repository di GitHub localmente, grazie ad esso quando attuavo una modifica localmente potevo poi aggiornare il repositery online. In questo modo **potevo programmare tranquillamente offline** e successivamente aggiornare il tutto
 
 # Homepage slider
 Nella homepage sono presenti degli slider provenienti dalle demo di [Swiper](https://swiperjs.com/demos)
