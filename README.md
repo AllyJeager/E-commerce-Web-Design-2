@@ -13,9 +13,9 @@ Il repository è pubblicato a questo indirizzo: https://mangacommerce.netlify.ap
 #### Il perchè della scelta
 Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il mio repository di GitHub localmente, grazie ad esso quando attuavo una modifica localmente potevo poi aggiornare il repositery online. In questo modo **potevo programmare tranquillamente offline** e successivamente aggiornare il tutto
 # AI come supporto
-## Chat GPT
+### Chat GPT
 [![GPT](/immagini/readme/chatgpt.png)](https://openai.com/blog/chatgpt)
-## Come è stata usata
+### Come è stata usata
 Ho usato questa IA per creare in parte il **codice** e aiutarmi quando non sapevo come realizzarlo, inoltre mi è stata utile anche per creare parte dei **testi** all'interno del sito
 
 # Homepage slider
