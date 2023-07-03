@@ -7,10 +7,8 @@ Il repository è pubblicato a questo indirizzo: https://mangacommerce.netlify.ap
 
 
 # Strumento per la programmazione
-|||---|||
-#### logo
+#### Visual Studio Code
 ![VSC](/immagini/readme/app-icon.png)
-|||---|||
 #### Il perchè della scelta
 Per questo progetto ho usato il code editor **Visual Studio Code**, clonando il mio repository di GitHub localmente, grazie ad esso quando attuavo una modifica localmente potevo poi aggiornare il repositery online. In questo modo **potevo programmare tranquillamente offline** e successivamente aggiornare il tutto
 
