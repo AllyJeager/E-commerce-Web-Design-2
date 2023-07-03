@@ -3,12 +3,20 @@ theme: default
 paginate: true
 backgroundImage: url('https://img.freepik.com/free-vector/blue-business-background-with-blocks_53876-100595.jpg?w=1060&t=st=1688418259~exp=1688418859~hmac=c20e25c39145cbaaa2bf3b2eb287f5c1396f36eb0404af47f9f0a767ebfa694f')
 marp: true
+footer: 'https://github.com/AllyJeager/E-commerce-Web-Design-2'
 ---
-# Corso WebDesign
-Impariamo insieme come utilizzare HTML, CSS e Javascript
+# Progetto d'esame
+## Manga Commerce
+**Alessia Colpo** n° _matricola:823_
+Graphic Design
+ACME - 3°anno
+A.A. 2023-2024
+**Materia**:Web Design 2
+**Docente**:Matteo Baccan
+
 
 ---
-## Corso di Web Design
+# Corso di Web Design
 
 Introduzione agli strumenti di sviluppo web
 _Lezione introduttiva del corso: conoscenza, obiettivi, primi argomenti.
