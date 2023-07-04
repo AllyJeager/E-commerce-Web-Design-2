@@ -1,6 +1,7 @@
 ---
+
+backgroundImage: url('sfondo.png')
 paginate: true
-backgroundImage: url('https://t4.ftcdn.net/jpg/01/82/43/27/360_F_182432773_R71WfWJPBTuecZIgx7skA0s6GfPaIhJa.jpg')
 marp: true
 ---
 # Progetto d'esame
