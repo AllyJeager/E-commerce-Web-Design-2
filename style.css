@@ -105,6 +105,8 @@ footer{
     height:50px;
     display: block;      
     overflow:hidden;
+    color: #e52421;
+    text-decoration: none;
    } 
 .cluster {
       text-align: center;
@@ -253,4 +255,9 @@ footer{
   font-size: 35px;
   color: #e52421;
 
+}
+#story{
+  height:90px;
+  display: block;      
+  overflow:auto;
 }

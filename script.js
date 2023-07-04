@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="col-md-6">
           <h2 class="mb-4">${product.nome}</h2>
-          <p class="mb-4">${product.descrizione}</p>
+          <p id="story" class="mb-4">${product.descrizione}</p>
           <h4 class="mb-3">Prezzo:${product.prezzo.toFixed(2)}€</h4>
           <form>
             <div class="mb-3">
