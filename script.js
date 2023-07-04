@@ -319,7 +319,7 @@ function calculateTotal() {
     var total = price * quantity;
 
     var totalElement = quantityElement.parentNode.nextElementSibling;
-    totalElement.textContent = "Totale: €" + total.toFixed(2);
+    totalElement.textContent = "Totale:€" + total.toFixed(2);
 
     subtotalElement.textContent = "€" + total.toFixed(2);
 
