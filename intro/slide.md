@@ -1,6 +1,6 @@
 ---
 paginate: true
-backgroundImage: url('https://img.freepik.com/free-vector/blue-business-background-with-blocks_53876-100595.jpg?w=1060&t=st=1688418259~exp=1688418859~hmac=c20e25c39145cbaaa2bf3b2eb287f5c1396f36eb0404af47f9f0a767ebfa694f')
+backgroundImage: url('https://t4.ftcdn.net/jpg/01/82/43/27/360_F_182432773_R71WfWJPBTuecZIgx7skA0s6GfPaIhJa.jpg')
 marp: true
 ---
 # Progetto d'esame
