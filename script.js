@@ -236,9 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!localStorage.getItem("cookieConsent")) {
     cookieBanner.style.display = "block";
   }
-});
-
-//home loading
+});//home loading
 document.addEventListener("DOMContentLoaded", function () {
   var sPath=window.location.pathname;
   var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
