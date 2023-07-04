@@ -357,6 +357,15 @@ function removeProduct(event) {
 La funzione `removeProduct(event)` viene utilizzata per rimuovere un prodotto dalla lista e reimpostando a zero i valori
 
 ---
+## Responsive mockup
+![width:750px](mockup.png)
+
+---
+## Analisi [GTmetrix](https://swiperjs.com/demos)
+![width:750px](gtmetrix1.png)
+![height:150px](gtmetrix2.png)
+
+---
 # Grazie per l'attenzione
 Alessia Colpo
 
