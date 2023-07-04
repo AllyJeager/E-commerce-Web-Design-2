@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
                     <b>${product.prezzo.toFixed(2)}€</b>
                     <br>
-                    <a class="btn btn-primary">Aggiungi al carrello</a>
+                    <a class="btn btn-danger">Aggiungi al carrello</a>
                    </div>
                </div>
            </div>`;
@@ -132,15 +132,15 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${product.immagine}" alt="Immagine di esempio" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <h1 class="mb-4">${product.nome}</h1>
+          <h2 class="mb-4">${product.nome}</h2>
           <p class="mb-4">${product.descrizione}</p>
-          <h2 class="mb-3">Prezzo:${product.prezzo.toFixed(2)}€</h2>
+          <h4 class="mb-3">Prezzo:${product.prezzo.toFixed(2)}€</h4>
           <form>
             <div class="mb-3">
               <label for="quantita" class="form-label">Quantità:</label>
               <input type="number" class="form-control" id="quantita" min="1" value="1">
             </div>
-            <span class="btn btn-primary">Aggiungi al carrello</span>
+            <span class="btn btn-danger">Aggiungi al carrello</span>
           </form>
         </div>
       </div>`;
@@ -209,7 +209,7 @@ function filterProducts() {
             </a>
             <b>${product.prezzo.toFixed(2)}€</b>
             <br>
-            <a class="btn btn-primary">Aggiungi al carrello</a>
+            <a class="btn btn-danger">Aggiungi al carrello</a>
           </div>
         </div>
       </div>`;
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>
       <b>${product.prezzo.toFixed(2)}€</b>
       <br>
-      <a class="btn btn-primary">Aggiungi al carrello</a>
+      <a class="btn btn-danger">Aggiungi al carrello</a>
     </div>
   </div>
 </div>`;

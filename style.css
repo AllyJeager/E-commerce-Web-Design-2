@@ -211,6 +211,10 @@ footer{
 #team /*h2*/ {
     text-align: center;
   }
+#description/*container*/ {
+  text-align: center;
+  width: 900px;
+}
 /*contatti*/
 #invia{
     margin-top:10px !important;
