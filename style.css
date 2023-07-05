@@ -215,7 +215,8 @@ footer{
   }
 #description/*container*/ {
   text-align: center;
-  width: 900px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 /*contatti*/
 #invia{

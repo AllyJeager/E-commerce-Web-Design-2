@@ -36,6 +36,14 @@ Ho usato il _code editor_ **Visual Studio Code**, clonando il mio repository di 
 Ho usato questa IA, _intelligenza artificiale_ per **creare** in parte il **codice** e aiutarmi quando non sapevo come realizzarlo, inoltre mi è stata utile anche per **creare parte dei testi** all'interno del sito
 
 ---
+## Esempi di pagine generate da Chat GPT:
+![](ambiente.png)
+
+---
+![](domande.png)
+**N.B:** ogni elemento è stato revisionato e adattato dalla sottoscritta.
+
+---
 # Creazione del sito
 ---
 ## Homepage
@@ -44,37 +52,10 @@ Caratteristica rilevante sono gli slider, realizzati usando delle demo di [Swipe
 
 ---
 ### Primo Slider:
-```html
-<div class="swiper mySwiper1">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img alt="place" src="https://via.placeholder.com/1920x650">
-        </div>
-        <div class="swiper-slide">
-            <img alt="place" src="https://via.placeholder.com/1920x650">
-        </div>
-        <div class="swiper-slide">
-            <img alt="place" src="https://via.placeholder.com/1920x650">
-        </div>
-    </div>
-</div>
-```
----
-Funzione JS
-```js
-var swiper = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-```
+![](slider1.png)
+Il carosello iniziale prevede un **autoplay** con un intervallo di tempo specifico 
+e la possibilità di fare swipe e vedere le altre diapositive.
+
 ---
 ### Secondo Slider
 I prodotti nella home sono resi **dinamici** grazia a una funzione **JS** che
