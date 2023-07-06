@@ -132,13 +132,13 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${product.immagine}" alt="Immagine di esempio" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <h2 class="mb-4">${product.nome}</h2>
+          <a class="nome" href="prodotti.html"> <h2  class="mb-4 nome">${product.nome}</h2> </a>
           <p id="story" class="mb-4">${product.descrizione}</p>
-          <h4 class="mb-3">Prezzo:${product.prezzo.toFixed(2)}€</h4>
+          <h5 class="mb-3">Prezzo:€${product.prezzo.toFixed(2)}</h4>
           <form>
             <div class="mb-3">
               <label for="quantita" class="form-label">Quantità:</label>
-              <input type="number" class="form-control" id="quantita" min="1" value="1">
+              <input type="number" class="form-control quantity" min="1" value="1">
             </div>
             <span class="btn btn-danger">Aggiungi al carrello</span>
           </form>

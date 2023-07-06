@@ -41,9 +41,8 @@ google material icons
 ---
 ![bg right:33% width:300px](googlefonts.png)
 ## Google Material Icons
-All’interno del sito ho deciso di utilizzare le Material Icons di Google, in questo modo non ho dovuto preoccuparmi più di tanto della risoluzione come ho dovuto fare con le immagini.
-
-Le Material Icons si comportano come un font pertanto a livello di CSS vengono utilizzate le stesse proprietà.
+All’interno del sito ho deciso di utilizzare le Material Icons di Google, in questo modo non ho dovuto preoccuparmi più di tanto della risoluzione.
+Le Material Icons inoltre si comportano come un font pertanto a livello di CSS vengono utilizzate le stesse proprietà.
 
 ---
 # IA e Chat GPT
@@ -157,7 +156,7 @@ Viene poi utilizzato l'oggetto **localStorage** per impostare un valore booleano
     }
 });
 ```
-Successivamente, si verifica se l'utente ha già accettato i cookie, se nel localStorage è **presente** un **valore associato alla chiave "cookieConsent"**. Se non è presente, viene impostato lo stile dell'elemento cookieBanner su "block", che lo rende visibile. 
+Successivamente, si verifica se l'utente ha già accettato i cookie, se nel localStorage è **presente** un **valore associato alla chiave "cookieConsent"**. Se non è presente, viene impostato lo stile dell'elemento cookieBanner su "block", che lo rende visibile.
 
 ---
 ![bg right:33% width:190px](top.jpeg)
@@ -210,14 +209,14 @@ La barra di ricerca è inglobata all'interno della **navbar**. Visivamente volev
 searchIcon.addEventListener("click", function () {
     if (searchInput.classList.contains("show-search-input")) {
         searchInput.classList.remove("show-search-input");
-    } 
+    }
 ```
 Questo blocco di codice aggiunge un gestore di eventi al clic sull'elemento con l'**ID "search-icon"**. Quando l'utente fa **clic sull'icona di ricerca**, viene eseguita una **funzione di callback**.
 In questo caso si verficia se l'elemento **searchInput** ha attiva la classe CSS **"show-search-input"** ed è quindi già visibile, allora all'**evento di clic** la **classe "show-search-input" viene rimossa** dall'elemento searchInput, quindi il **campo di input di ricerca viene nascosto**.
 
 ---
 ```js
-    else 
+    else
     {
         searchInput.classList.add("show-search-input");
         searchInput.focus();

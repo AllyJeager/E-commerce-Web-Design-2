@@ -1,184 +1,177 @@
 <!DOCTYPE html>
 <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MANGA COMMERCE</title>
+        <meta name="description" content="creazione di un sito e-commerce multipagina come progetto d'esame per il corso accademico web design 2.">
+        <meta name="author" content="Alessia Colpo">
+        <meta name="keywords" content="Accademia, belle arti, arte, università, laurea, graphic design, fumetto, manga, giappone, akihabara, otaku, nerd, shoujo, shounen, spokon, seinen">
+        <link rel="shortcut icon" href="immagini/favicon.png">
+        <!-- Collegamento ai file CSS di Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <!-- Collegamento alla libreria Material Icons di Google -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- CSS -->
+        <link href="style.css" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANGA COMMERCE</title>
-    <meta name="description" content="creazione di un sito e-commerce multipagina come progetto d'esame per il corso accademico web design 2.">
-    <meta name="author" content="Alessia Colpo">
-    <meta name="keywords" content="Accademia, belle arti, arte, università, laurea, graphic design, fumetto, manga, giappone, akihabara, otaku, nerd, shoujo, shounen, spokon, seinen">
-    <!-- Collegamento ai file CSS di Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-      <!-- Collegamento alla libreria Material Icons di Google -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- CSS -->
-    <link href="style.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="free-shipping-banner">
-            <p>SPEDIZIONE GRATUITA DA 39€</p>
-        </div>
-        <nav class="navbar navbar-expand-lg custom-navbar">
-            <div class="container-fluid">
-            <img class="navbar-brand" id="logonav" href="#" src="immagini/logo manga fun oriz.png">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="chisiamo.html">Chi siamo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contatti.html">Contatti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="prodotti.html">Prodotti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carrello.html">Carrello</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex ml-auto mt-2 mt-lg-0" id="search-form">
-                        <div class="d-flex align-items-center">
-                            <i class="material-icons search-icon" id="search-icon">search</i>
-                            <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
-                        </div>
-                    </form>
-                </div>
+    <body>
+        <header>
+            <div class="free-shipping-banner">
+                <p>SPEDIZIONE GRATUITA DA 39€</p>
             </div>
-        </nav>
-    </header>
-   
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <img class="navbar-brand" id="logonav" href="#" src="immagini/logo manga fun oriz.png">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="chisiamo.html">Chi siamo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contatti.html">Contatti</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prodotti.html">Prodotti</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="carrello.html">Carrello</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex ml-auto mt-2 mt-lg-0" id="search-form">
+                            <div class="d-flex align-items-center">
+                                <i class="material-icons search-icon" id="search-icon">search</i>
+                                <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <main id="main" class="container mt-5">
+        <main id="main" class="container mt-5">
             <h1>Termini e condizioni</h1>
-            <p>Benvenuto nella sezione dei termini e condizioni di Manga Commerce. Prima di utilizzare il nostro sito web,
-                ti invitiamo a leggere attentamente i seguenti termini e condizioni. L'utilizzo del nostro sito implica la
-                tua accettazione di questi termini e condizioni. Se non sei d'accordo con qualsiasi parte dei seguenti
-                termini, ti preghiamo di non utilizzare il nostro sito.</p>
-    
+            <p>
+                Benvenuto nella sezione dei termini e condizioni di Manga Commerce. Prima di utilizzare il nostro sito web, ti invitiamo a leggere attentamente i seguenti termini e condizioni. L'utilizzo del nostro sito implica la tua
+                accettazione di questi termini e condizioni. Se non sei d'accordo con qualsiasi parte dei seguenti termini, ti preghiamo di non utilizzare il nostro sito.
+            </p>
+
             <h2>1. Accettazione dei termini</h2>
-            <p>Mediante l'accesso a questo sito web, accetti di essere vincolato dai presenti Termini e Condizioni di
-                utilizzo, da tutte le leggi e regolamenti applicabili e accetti di essere responsabile del rispetto delle
-                leggi locali applicabili. Se non accetti questi termini, sei proibito dall'uso o accesso a questo sito. I
-                materiali contenuti in questo sito web sono protetti dal diritto d'autore e dal diritto di proprietà
-                intellettuale.</p>
-    
+            <p>
+                Mediante l'accesso a questo sito web, accetti di essere vincolato dai presenti Termini e Condizioni di utilizzo, da tutte le leggi e regolamenti applicabili e accetti di essere responsabile del rispetto delle leggi locali
+                applicabili. Se non accetti questi termini, sei proibito dall'uso o accesso a questo sito. I materiali contenuti in questo sito web sono protetti dal diritto d'autore e dal diritto di proprietà intellettuale.
+            </p>
+
             <h2>2. Utilizzo del sito</h2>
-            <p>È consentito scaricare temporaneamente una copia dei materiali (informazioni o software) presenti sul sito
-                web di Manga Commerce solo per uso personale e non commerciale. Questo è il rilascio di una licenza, non un
-                trasferimento di titolo e, in virtù di questa licenza, non è consentito:</p>
+            <p>
+                È consentito scaricare temporaneamente una copia dei materiali (informazioni o software) presenti sul sito web di Manga Commerce solo per uso personale e non commerciale. Questo è il rilascio di una licenza, non un
+                trasferimento di titolo e, in virtù di questa licenza, non è consentito:
+            </p>
             <ul>
                 <li>modificare o copiare i materiali;</li>
-                <li>utilizzare i materiali per qualsiasi scopo commerciale o per qualsiasi esposizione pubblica
-                    (commerciale o non commerciale);</li>
-                <li>tentare di decompilare o invertire l'ingegneria di qualsiasi software contenuto nel sito web di Manga
-                    Commerce;</li>
+                <li>utilizzare i materiali per qualsiasi scopo commerciale o per qualsiasi esposizione pubblica (commerciale o non commerciale);</li>
+                <li>tentare di decompilare o invertire l'ingegneria di qualsiasi software contenuto nel sito web di Manga Commerce;</li>
                 <li>rimuovere qualsiasi copyright o altre notazioni di proprietà dai materiali; o</li>
-                <li>trasferire i materiali ad un'altra persona o "specchiare" i materiali su un altro server </li>
+                <li>trasferire i materiali ad un'altra persona o "specchiare" i materiali su un altro server</li>
             </ul>
-            <p>Questa licenza sarà automaticamente risolta se violi una qualsiasi di queste restrizioni e potrebbe essere risolta
-                da Manga Commerce in qualsiasi momento. Al termine della visualizzazione di questi materiali o alla cessazione di
-                questa licenza, devi distruggere qualsiasi materiale scaricato in tuo possesso, che sia in formato elettronico o
-                stampato.</p>
+            <p>
+                Questa licenza sarà automaticamente risolta se violi una qualsiasi di queste restrizioni e potrebbe essere risolta da Manga Commerce in qualsiasi momento. Al termine della visualizzazione di questi materiali o alla
+                cessazione di questa licenza, devi distruggere qualsiasi materiale scaricato in tuo possesso, che sia in formato elettronico o stampato.
+            </p>
             <h2>3. Limitazioni</h2>
-            <p>In nessun caso Manga Commerce o i suoi fornitori saranno responsabili per eventuali danni (inclusi, senza
-                limitazione, danni per perdita di dati o di profitto, o per interruzione dell'attività) derivanti dall'uso o
-                dall'incapacità di utilizzare i materiali presenti sul sito web di Manga Commerce, anche se Manga Commerce o un
-                rappresentante autorizzato di Manga Commerce è stato informato verbalmente o per iscritto della possibilità di tali
-                danni. Poiché alcune giurisdizioni non consentono limitazioni su garanzie implicite o limitazioni di responsabilità
-                per danni consequenziali o incidentali, queste limitazioni potrebbero non essere applicabili a te.</p>
+            <p>
+                In nessun caso Manga Commerce o i suoi fornitori saranno responsabili per eventuali danni (inclusi, senza limitazione, danni per perdita di dati o di profitto, o per interruzione dell'attività) derivanti dall'uso o
+                dall'incapacità di utilizzare i materiali presenti sul sito web di Manga Commerce, anche se Manga Commerce o un rappresentante autorizzato di Manga Commerce è stato informato verbalmente o per iscritto della possibilità di
+                tali danni. Poiché alcune giurisdizioni non consentono limitazioni su garanzie implicite o limitazioni di responsabilità per danni consequenziali o incidentali, queste limitazioni potrebbero non essere applicabili a te.
+            </p>
             <h2>4. Modifiche</h2>
-            <p>I materiali presenti sul sito web di Manga Commerce potrebbero includere errori tecnici, tipografici o fotografici.
-                Manga Commerce non garantisce che i materiali presenti sul suo sito web siano accurati, completi o aggiornati.
-                Manga Commerce può apportare modifiche ai materiali contenuti nel suo sito web in qualsiasi momento senza preavviso.
-                Tuttavia, Manga Commerce non si impegna a aggiornare i materiali.</p>
+            <p>
+                I materiali presenti sul sito web di Manga Commerce potrebbero includere errori tecnici, tipografici o fotografici. Manga Commerce non garantisce che i materiali presenti sul suo sito web siano accurati, completi o
+                aggiornati. Manga Commerce può apportare modifiche ai materiali contenuti nel suo sito web in qualsiasi momento senza preavviso. Tuttavia, Manga Commerce non si impegna a aggiornare i materiali.
+            </p>
             <h2>5. Legge applicabile</h2>
-            <p>Questi termini e condizioni sono regolati e interpretati in conformità con le leggi italiane e ti sottometti
-                irrevocabilmente alla giurisdizione esclusiva dei tribunali italiani per risolvere eventuali controversie.</p>
-            <p>Accedendo a questo sito web, accetti di rispettare questi termini e condizioni di utilizzo. Se non accetti di
-                rispettare questi termini, ti preghiamo di non utilizzare il nostro sito web.</p>
-    </main>
-</body>
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-    <!-- Section: Links  -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <img id="logo" src="immagini/logo manga fun.png">
-                    <p>
-                        Via Giuseppe Trapani, n.20
-                        <br> 00133 Roma Italia
-                    </p>
+            <p>Questi termini e condizioni sono regolati e interpretati in conformità con le leggi italiane e ti sottometti irrevocabilmente alla giurisdizione esclusiva dei tribunali italiani per risolvere eventuali controversie.</p>
+            <p>Accedendo a questo sito web, accetti di rispettare questi termini e condizioni di utilizzo. Se non accetti di rispettare questi termini, ti preghiamo di non utilizzare il nostro sito web.</p>
+        </main>
+    </body>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <img id="logo" src="immagini/logo manga fun.png">
+                        <p>
+                            Via Giuseppe Trapani, n.20
+                            <br>
+                            00133 Roma Italia
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            INFORMAZIONI
+                        </h6>
+                        <p>
+                            <a href="#" class="text-reset">Termini e condizioni</a>
+                        </p>
+                        <p>
+                            <a href="spedizionieresi.html" class="text-reset">Spedizioni e resi</a>
+                        </p>
+                        <p>
+                            <a href="domande.html" class="text-reset">Domande frequenti</a>
+                        </p>
+                        <p>
+                            <a href="ambiente.html" class="text-reset">Ambiente</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">CONTATTI</h6>
+                        <p>info@mangafun.com</p>
+
+                        <p>+39 234 567 889</p>
+                    </div>
+                    <!-- Grid column -->
                 </div>
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-            INFORMAZIONI
-          </h6>
-                  <p>
-                        <a href="#" class="text-reset">Termini e condizioni</a>
-                    </p>
-                    <p>
-                        <a href="spedizionieresi.html" class="text-reset">Spedizioni e resi</a>
-                    </p>
-                    <p>
-                        <a href="domande.html" class="text-reset">Domande frequenti</a>
-                    </p>
-                    <p>
-                        <a href="ambiente.html" class="text-reset">Ambiente</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">CONTATTI</h6>
-                    <p>info@mangafun.com</p>
-
-                    <p>+39 234 567 889</p>
-
-                </div>
-                <!-- Grid column -->
+                <!-- Grid row -->
             </div>
-            <!-- Grid row -->
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div id="copyright" class="text-center p-4">
+            ©2023 Manga Fun s.r.l.s P.IVA: 18971556005
         </div>
-    </section>
-    <!-- Section: Links  -->
+    </footer>
 
-    <!-- Copyright -->
-    <div id="copyright" class="text-center p-4">
-        ©2023 Manga Fun s.r.l.s P.IVA: 18971556005
+    <div onclick="scrollToTop()" class="top">
+        <img id="toparrow" alt="scrolltoparrow" src="immagini/top-arrow.jpeg">
     </div>
-</footer>
 
-<div onclick="scrollToTop()" class="top">
-    <img id="toparrow" alt="scrolltoparrow" src="immagini/top-arrow.jpeg">
-  </div>
-
-<!-- Collegamento ai file JavaScript di Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<!-- link javascript -->
-<script src="script.js"></script>
-
+    <!-- Collegamento ai file JavaScript di Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="script.js"></script>
 </html>
