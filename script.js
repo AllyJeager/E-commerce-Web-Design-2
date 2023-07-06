@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>`;
     }
   });
-  document.getElementById("cambiabileHAHA").innerHTML = html;
+  document.getElementById("singolo").innerHTML = html;
 });
 
 

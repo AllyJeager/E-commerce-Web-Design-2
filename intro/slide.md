@@ -32,10 +32,18 @@ Marp conosciuto anche come _Markdown Presentation Ecosystem_ permette un'esperie
 Ho usato il _code editor_ **Visual Studio Code**, clonando il mio repository di GitHub localmente, potendo **programmare** tranquillamente **offline** e successivamente aggiornare il mio repository di GitHub
 
 ---
+![bg right:33% width:300px](bootstrap.png)
 # Librerie
-js
-bootstrap
+## Bootstrap
+Bootstrap è una libreria di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell'interfaccia, come moduli, pulsanti e navigazione, così come alcune estensioni opzionali di JavaScript.
 google material icons
+
+---
+![bg right:33% width:300px](googlefonts.png)
+## Google Material Icons
+All’interno del sito ho deciso di utilizzare le Material Icons di Google, in questo modo non ho dovuto preoccuparmi più di tanto della risoluzione come ho dovuto fare con le immagini.
+
+Le Material Icons si comportano come un font pertanto a livello di CSS vengono utilizzate le stesse proprietà.
 
 ---
 # IA e Chat GPT
@@ -340,6 +348,42 @@ Questa parte contiene la funzione filterProducts, che viene chiamata per filtrar
  Se la categoria e l'intervallo di prezzo dei prodotti corrispondono a quelli selezionati viene generato un blocco HTML all'interno dell'elemento con l'ID "rigacontenitore".
 
 ---
+![bg right:45% width:650px](singolo.png)
+## Prodotto Singolo
+La generazione di questa pagina è resa dinamica utilizzando sempre l'esitenza dell'array globale con i prodotti
+
+---
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  var Path=window.location.pathname;
+  var Page = Path.substring(Path.lastIndexOf("/") + 1);
+  var Search = window.location.search
+  var Query = Search.substring(Search.lastIndexOf("?p=") + 3);
+    if(Page!="prodotto.html" && Query=="")
+    return;
+
+```
+Viene definita una funzione che verrà eseguita al completo caricamento della pagina HTML. 
+La funzione estrae il nome del file HTML corrente nella variabile "Page" e il valore del parametro "p" dall'URL nella variabile "Query". Queste informazioni potrebbero essere utilizzate per eseguire azioni specifiche.
+
+---
+```js
+  let html="";
+  products.forEach((product) => {
+    if (product.nome.toLowerCase()== decodeURIComponent(Query).toLowerCase()) {
+      html += `
+      <div class="row">
+     ...
+      </div>`;
+    }
+  });
+  document.getElementById("singolo").innerHTML = html;
+});
+```
+Il codice dopo aver generato del markup HTML dinamicamente in base ai prodotti presenti nell'array products e al valore del parametro "p" nell'URL lo inserisce all'interno dell'elemento con l'ID "singolo" nella pagina HTML.
+
+---
 ![bg right:30% width:650px](carrellomockup1.png)
 ## Carrello
 La pagina del carrello non è completamente funzionante, al momento non è possibile aggiungere i prodotti al suo interno ma è stata realizzata per dare un'idea di come dovrebbe essere effettivamente.
@@ -355,6 +399,7 @@ function calculateTotal() {
     var shippingCostElement = document.getElementById("shippingCost");
     var totalAmountElement = document.getElementById("totalAmount");
     if (priceElement && quantityElement && subtotalElement && shippingCostElement && totalAmountElement)
+    ...
 ```
 Inizialmente controlla se tutti gli elementi necessari sono presenti sulla pagina.
 
