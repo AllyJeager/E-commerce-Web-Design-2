@@ -304,23 +304,22 @@ function calculateTotal() {
 
   if (priceElement && quantityElement && subtotalElement && shippingCostElement && totalAmountElement) {
     var priceString = priceElement.textContent;
-    var price = parseFloat(priceString.replace("Prezzo: ", "").replace("€", "").replace(",", "."));
+    var price = parseFloat(priceString.replace(/[^0-9.,]/g, "").replace(",", "."));
     var quantity = parseInt(quantityElement.value);
     var total = price * quantity;
 
     var totalElement = quantityElement.parentNode.nextElementSibling;
-    totalElement.textContent = "Totale:€" + total.toFixed(2);
+    totalElement.textContent = "Totale: €" + total.toFixed(2);
 
     subtotalElement.textContent = "€" + total.toFixed(2);
 
-    var shippingCost = 2.00; // Inserisci il valore effettivo dei costi di spedizione
+    var shippingCost = 2.0; // Inserisci il valore effettivo dei costi di spedizione
     shippingCostElement.textContent = "€" + shippingCost.toFixed(2);
 
     var totalAmount = total + shippingCost;
     totalAmountElement.textContent = "€" + totalAmount.toFixed(2);
   }
 }
-
 function removeProduct(event) {
   var card = event.target.closest(".card");
   card.remove();

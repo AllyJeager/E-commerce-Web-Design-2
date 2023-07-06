@@ -288,15 +288,15 @@ if (document.getElementById("contact-form") != null) {
 Qui viene verificata l'esistenza di un elemento con l'ID "contact-form" e, se esiste, viene aggiunto un **event listener per l'evento di submit** su quell'elemento. Quando viene inviato il modulo associato a "contact-form", la funzione handleFormSubmit viene eseguita per gestire l'evento di submit e eseguire le azioni desiderate.
 
 ---
-
+![bg right:45% width:600px](filtromockup.png)
 ## Prodotti
-La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** e **generando del codice HTML per ogni prodotto**, che viene quindi inserito all'interno di un elemento specifico nel documento HTML.
+La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** che permette di**generare codice HTML per ogni prodotto**, inserito all'interno di un elemento specifico (determinato da un ID) nel documento HTML.
 Inoltre è presente un **filtro dei prodotti** in base a:
 - Categoria
 - Intervallo di prezzo selezionati
 
 ---
-#### Gestione del filtro
+#### Price Range
 ```js
 if (document.getElementById("priceRange") != null) {
   var priceRange = document.getElementById("priceRange");
@@ -307,14 +307,22 @@ if (document.getElementById("priceRange") != null) {
   };
 }
 ```
+Se esiste l'elemento con ID "priceRange" esso viene assegnato a due variabili: priceRange e priceDisplay.  Successivamente, viene definito un **event handler** per l'evento **"input"** del campo **priceRange**. Quando viene modificato il valore del campo, la funzione associata viene eseguita e imposta il **testo dell'elemento priceDisplay** al **valore del campo priceRange**, aggiungendo il simbolo "€".
+
 ---
+#### Filtro prodotti
 ```js
 function filterProducts() {
-  var selectedCategory = document.getElementById("categoryDropdown").value;
-  var priceRangeValue = document.getElementById("priceRange").value;
+...
 // prodotti dinamici
   let html = "";
-  products.forEach((product) => {
+  products.forEach((product) =>
+```
+Questa parte contiene la funzione filterProducts, che viene chiamata per filtrare i prodotti in base alla categoria e all'intervallo di prezzo. Viene creato un **ciclo forEach** per iterare attraverso ogni prodotto nell'array products.
+
+---
+```js
+  {
     console.log(selectedCategory);
     if (
       product.prezzo <= parseInt(priceRangeValue) &&
@@ -322,58 +330,52 @@ function filterProducts() {
     ) {
       html += `
       <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
-        <div class="product ${product.categoria}" data-price="${product.prezzo}">
-          <img class="prodottoimg" alt="place" src="${product.immagine}">
-          <div>
-            <a class="nome" href="prodotto.html?p=${product.nome}">
-              <p class="nome">${product.nome}</p>
-            </a>
-            <b>${product.prezzo.toFixed(2)}€</b>
-            <br>
-            <a class="btn btn-primary">Aggiungi al carrello</a>
-          </div>
-        </div>
+     ...
       </div>`;
     }
   })
-
   document.getElementById("rigacontenitore").innerHTML = html;
 }
 ```
+ Se la categoria e l'intervallo di prezzo dei prodotti corrispondono a quelli selezionati viene generato un blocco HTML all'interno dell'elemento con l'ID "rigacontenitore".
+
 ---
+![bg right:30% width:650px](carrellomockup1.png)
 ## Carrello
+La pagina del carrello non è completamente funzionante, al momento non è possibile aggiungere i prodotti al suo interno ma è stata realizzata per dare un'idea di come dovrebbe essere effettivamente.
+
 ---
-#### Calcolo importo
+### Calcolo importo
+La funzione `calculateTotal()` viene utilizzata per calcolare il totale dell'importo in base al prezzo e alla quantità di un prodotto selezionato.
 ```js
 function calculateTotal() {
     var priceElement = document.querySelector(".card-text.price");
-    var quantityElement = document.querySelector(".form-control.quantity");
+    var quantityElement = document.querySelector("form-control.quantity");
     var subtotalElement = document.getElementById("subtotal");
     var shippingCostElement = document.getElementById("shippingCost");
     var totalAmountElement = document.getElementById("totalAmount");
-
-    if (priceElement && quantityElement && subtotalElement && shippingCostElement && totalAmountElement) {
-        var priceString = priceElement.textContent;
-        var price = parseFloat(priceString.replace("Prezzo: ", "").replace("€", "").replace(",", "."));
-        var quantity = parseInt(quantityElement.value);
-        var total = price * quantity;
-
-        var totalElement = quantityElement.parentNode.nextElementSibling;
-        totalElement.textContent = "Totale: €" + total.toFixed(2);
-
-        subtotalElement.textContent = "€" + total.toFixed(2);
-
-        var shippingCost = 2.0; // Inserisci il valore effettivo dei costi di spedizione
-        shippingCostElement.textContent = "€" + shippingCost.toFixed(2);
-
-        var totalAmount = total + shippingCost;
-        totalAmountElement.textContent = "€" + totalAmount.toFixed(2);
-    }
-}
+    if (priceElement && quantityElement && subtotalElement && shippingCostElement && totalAmountElement)
 ```
-La funzione `calculateTotal()` viene utilizzata per calcolare il totale dell'importo in base al prezzo e alla quantità di un prodotto selezionato.
+Inizialmente controlla se tutti gli elementi necessari sono presenti sulla pagina.
 
 ---
+![bg right:30% width:650px](carrellomockup2.png)
+Se tutti gli elementi sono presenti:
+- Ottiene il **prezzo del prodotto dalla stringa contenuta in priceElement**, rimuovendo tutti i caratteri non numerici e mantenendo solo le cifre e i separatori decimali e lo assegna alla variabile **price**
+- Ottiene la **quantità** del prodotto dal **campo di input in quantityElement** e la converte in un numero intero che assegna alla variabile quantity.
+- Calcola il **totale moltiplicando il prezzo per la quantità** e assegna il risultato alla variabile total.
+```js
+ var total = price * quantity;
+ ```
+---
+![bg right:30% width:650px](carrellomockup4.png)
+A questo punto:
+- Aggiorna il contenuto dei vari elementi HTML con i prezzi finali formattati con due decimali.
+- Imposta il costo di spedizione su 
+- Calcola l'**importo totale** sommando il **totale del prodotto al costo di spedizione** e assegna il risultato alla variabile totalAmount.
+
+---
+![bg right:30% width:650px](carrellomockup3.png)
 #### Rimozione del prodotto
 ```js
 function removeProduct(event) {
@@ -391,7 +393,7 @@ function removeProduct(event) {
     }
 }
 ```
-La funzione `removeProduct(event)` viene utilizzata per rimuovere un prodotto dalla lista e reimpostando a zero i valori
+La funzione `removeProduct(event)` viene utilizzata per rimuovere il prodotto dal carrello reimpostando a zero i valori dei vari elementi html.
 
 ---
 ## Responsive mockup
