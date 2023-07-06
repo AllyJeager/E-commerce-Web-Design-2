@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieBanner.style.display = "block";
   }
 });
+
 //home loading
 document.addEventListener("DOMContentLoaded", function () {
   var sPath=window.location.pathname;
@@ -302,8 +303,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>`;
   });
-  document.getElementById("TEST").innerHTML = html;
+  document.getElementById("dinamicihome").innerHTML = html;
 });
+
 //carrello
 function calculateTotal() {
   var priceElement = document.querySelector(".card-text.price");
