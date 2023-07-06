@@ -255,40 +255,40 @@ All'interno di queste card vengono presentate le figure del team di Manga Fun. U
 In questa pagina ho inserito gli **estremi di contatto** e ho incluso un **form** per permettere alle persone di **contattarci direttamente dalla pagina**.
 
 ---
-### Checkbox
+![bg right:38% width:590px](contattimockup.png)
+### Invio modulo e Checkbox
 ```js
-document.querySelector("form").addEventListener("submit", function (event) {
-    var checkbox = document.getElementById("myCheck");
-    if (!checkbox.checked) {
-        event.preventDefault(); // Previene l'invio del modulo
-        var errorSpan = document.querySelector(".checkbox-error");
-        errorSpan.style.display = "block"; // Mostra il messaggio di avviso
-    }
-});
+function handleFormSubmit(event) {
+  event.preventDefault();
+  var checkboxChecked = document.getElementById("myCheck").checked;
 ```
-Questo primo blocco di codice gestisce l'evento di invio del modulo del form. Se una casella di controllo specifica non è selezionata, impedisce l'invio del modulo e mostra un messaggio di errore corrispondente.
+Questo primo blocco di codice **impedisce il comportamento predefinito dell'evento di submit del modulo** e seleziona l'elemento con l'**ID "myCheck"** accedendo alla proprietà checked del suddetto. La proprietà checked restituisce un valore booleano che indica se la casella di controllo è selezionata o meno. Questo valore viene assegnato alla variabile checkboxChecked, che verrà utilizzata nella riga successiva per prendere decisioni in base allo stato della casella di controllo.
 
 ---
 ### Messaggio di conferma
 ```js
-if (document.getElementById("contact-form") != null) {
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Previeni l'invio del modulo
-        var checkboxChecked = document.getElementById("myCheck").checked;
+  if (checkboxChecked) {
+    // Nascondi il modulo di contatto
+    document.getElementById("contact-form").style.display = "none";
 
-        if (checkboxChecked) {
-            // Nascondi il modulo di contatto
-            document.getElementById("contact-form").style.display = "none";
-
-            // Mostra il messaggio di conferma
-            document.getElementById("confirmation-message").style.display = "block";
-        }
-    });
+    // Mostra il messaggio di conferma
+    document.getElementById("confirmation-message").style.display = "block";
+  }
 }
 ```
-Il secondo blocco di codice gestisce sia l'evento di invio del modulo e quando una casella di controllo specifica è selezionata, nasconde il modulo di contatto e mostra un messaggio di conferma di invio del messaggio.
+Questa parte di codice verrà **eseguita solo se la casella di controllo è selezionata**.
+Se è selezionata il contact-form verrà nascosto (display="none") e verrà mostrato l'elemento con ID "confirmation-message" cambiando il suo diplay da **none** a **block**
 
 ---
+```js
+if (document.getElementById("contact-form") != null) {
+  document.getElementById("contact-form").addEventListener("submit", handleFormSubmit);
+}
+```
+Qui viene verificata l'esistenza di un elemento con l'ID "contact-form" e, se esiste, viene aggiunto un **event listener per l'evento di submit** su quell'elemento. Quando viene inviato il modulo associato a "contact-form", la funzione handleFormSubmit viene eseguita per gestire l'evento di submit e eseguire le azioni desiderate.
+
+---
+
 ## Prodotti
 La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** e **generando del codice HTML per ogni prodotto**, che viene quindi inserito all'interno di un elemento specifico nel documento HTML.
 Inoltre è presente un **filtro dei prodotti** in base a:

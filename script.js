@@ -151,33 +151,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //pagina contatti
-//checkbox
-document.querySelector("form").addEventListener("submit", function (event) {
-  var checkbox = document.getElementById("myCheck");
-  if (!checkbox.checked) {
-    event.preventDefault(); // Previene l'invio del modulo
-    var errorSpan = document.querySelector(".checkbox-error");
-    errorSpan.style.display = "block"; // Mostra il messaggio di avviso
+function handleFormSubmit(event) {
+  event.preventDefault(); // Previeni l'invio del modulo
+  var checkboxChecked = document.getElementById("myCheck").checked;
+
+  if (checkboxChecked) {
+    // Nascondi il modulo di contatto
+    document.getElementById("contact-form").style.display = "none";
+
+    // Mostra il messaggio di conferma
+    document.getElementById("confirmation-message").style.display = "block";
   }
-});
-//messaggio inviato
-if (document.getElementById("contact-form") != null) {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault(); // Previeni l'invio del modulo
-      var checkboxChecked = document.getElementById("myCheck").checked;
-
-      if (checkboxChecked) {
-        // Nascondi il modulo di contatto
-        document.getElementById("contact-form").style.display = "none";
-
-        // Mostra il messaggio di conferma
-        document.getElementById("confirmation-message").style.display = "block";
-      }
-    });
 }
-
+if (document.getElementById("contact-form") != null) {
+  document.getElementById("contact-form").addEventListener("submit", handleFormSubmit);
+}
 // filtro
 if (document.getElementById("priceRange") != null) {
   var priceRange = document.getElementById("priceRange");
