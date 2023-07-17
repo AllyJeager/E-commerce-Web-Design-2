@@ -47,7 +47,7 @@ Le Material Icons inoltre si comportano come un font pertanto a livello di CSS v
 ---
 # IA e Chat GPT
 ![bg right:33% width:250px](chatgpt.png)
-Ho usato questa IA, _intelligenza artificiale_ per **creare** in parte il **codice** e aiutarmi quando non sapevo come realizzarlo, inoltre mi è stata utile anche per **creare parte dei testi** all'interno del sito
+Ho usato questa IA, _intelligenza artificiale_ per **creare** in parte il **codice** e aiutarmi quando non sapevo come realizzarlo, inoltre mi è stata utile anche per **creare parte dei testi** all'interno del sito.
 
 ---
 ## Esempi di pagine generate da Chat GPT:
@@ -60,6 +60,17 @@ Ho usato questa IA, _intelligenza artificiale_ per **creare** in parte il **codi
 ---
 ![bg right:40% width:400px](coding1.png)
 # Creazione del sito
+---
+## Struttura
+Il sito è composto da 5 pagine principali: 
+- Home
+- Chi siamo
+- Contatti
+- Prodotti
+- Carrello
+
+Ogni pagina presenta degli elementi di base come la **navbar** e il **footer**
+
 ---
 ## Homepage
 ![bg right:33% width:250px](mockuphome.png)
@@ -441,7 +452,7 @@ La funzione `removeProduct(event)` viene utilizzata per rimuovere il prodotto da
 
 ---
 ## Responsive mockup
-![width:750px](mockup.png)
+![width:900px](mockup.png)
 
 ---
 ## Analisi [GTmetrix](https://swiperjs.com/demos)
