@@ -226,14 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//home loading
-document.addEventListener("DOMContentLoaded", function () {
-  var sPath=window.location.pathname;
-  var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
-  if(sPage!="index.html")
-    return;
-
-  //Initialize Swiper
+// home loading
+var sPath = window.location.pathname;
+var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
+if (sPage == "index.html") {
+  // Initialize Swiper
   var swiper = new Swiper(".mySwiper1", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -246,7 +243,8 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
-  //Initialize Swiper2
+
+  // Initialize Swiper2
   var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -269,30 +267,27 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-// prodotti dinamici home
-  html = "";
+
+  // Prodotti dinamici home
+  let html = "";
   products.forEach((product) => {
     html += `
-<div class="swiper-slide img">
-  <div class="card">
-    <img
-      class="card-img-top"
-      alt="place"
-      src=${product.immagine}
-    >
-    <div class="card-body">
-      <a class="nome" href="prodotto.html?p=${product.nome}">
-        <p class="nome">${product.nome}</p>
-      </a>
-      <b>${product.prezzo.toFixed(2)}€</b>
-      <br>
-      <a class="btn btn-danger">Aggiungi al carrello</a>
-    </div>
-  </div>
-</div>`;
+      <div class="swiper-slide img">
+        <div class="card">
+          <img class="card-img-top" alt="place" src=${product.immagine}>
+          <div class="card-body">
+            <a class="nome" href="prodotto.html?p=${product.nome}">
+              <p class="nome">${product.nome}</p>
+            </a>
+            <b>${product.prezzo.toFixed(2)}€</b>
+            <br>
+            <a class="btn btn-danger">Aggiungi al carrello</a>
+          </div>
+        </div>
+      </div>`;
   });
   document.getElementById("dinamicihome").innerHTML = html;
-});
+}
 
 //carrello
 function calculateTotal() {
