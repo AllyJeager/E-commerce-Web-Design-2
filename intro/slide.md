@@ -308,7 +308,7 @@ Qui viene verificata l'esistenza di un elemento con l'ID "contact-form" e, se es
 ---
 ![bg right:45% width:600px](filtromockup.png)
 ## Prodotti
-La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** che permette di**generare codice HTML per ogni prodotto**, inserito all'interno di un elemento specifico (determinato da un ID) nel documento HTML.
+La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** che permette di **generare codice HTML per ogni prodotto**, inserito all'interno di un elemento specifico (determinato da un ID) nel documento HTML.
 Inoltre è presente un **filtro dei prodotti** in base a:
 - Categoria
 - Intervallo di prezzo selezionati
@@ -426,7 +426,7 @@ Se tutti gli elementi sono presenti:
 ![bg right:30% width:650px](carrellomockup4.png)
 A questo punto:
 - Aggiorna il contenuto dei vari elementi HTML con i prezzi finali formattati con due decimali.
-- Imposta il costo di spedizione su 
+- Imposta il costo di spedizione 
 - Calcola l'**importo totale** sommando il **totale del prodotto al costo di spedizione** e assegna il risultato alla variabile totalAmount.
 
 ---
