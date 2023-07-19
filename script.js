@@ -76,6 +76,155 @@ searchInput.addEventListener("keypress", function (e) {
   }
 });
 
+//pagina contatti
+function handleFormSubmit(event) {
+  event.preventDefault(); // Previeni l'invio del modulo
+  var checkboxChecked = document.getElementById("myCheck").checked;
+
+  if (checkboxChecked) {
+    // Nascondi il modulo di contatto
+    document.getElementById("contact-form").style.display = "none";
+
+    // Mostra il messaggio di conferma
+    document.getElementById("confirmation-message").style.display = "block";
+  }
+};
+
+if (document.getElementById("contact-form") != null) {
+  document.getElementById("contact-form").addEventListener("submit", handleFormSubmit);
+};
+
+// filtro
+if (document.getElementById("priceRange") != null) {
+  var priceRange = document.getElementById("priceRange");
+  var priceDisplay = document.getElementById("priceDisplay");
+
+  priceRange.oninput = function () {
+    priceDisplay.innerHTML = "€" + priceRange.value;
+  };
+};
+
+function filterProducts() {
+  var selectedCategory = document.getElementById("categoryDropdown").value;
+  var priceRangeValue = document.getElementById("priceRange").value;
+  // prodotti dinamici
+  let html = "";
+  products.forEach((product) => {
+    console.log(selectedCategory);
+    if (
+      product.prezzo <= parseInt(priceRangeValue) &&
+      (product.categoria == selectedCategory || selectedCategory == "tutti")
+    ) {
+      html += `
+      <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="product ${product.categoria}" data-price="${product.prezzo}">
+          <img class="prodottoimg" alt="place" src="${product.immagine}">
+          <div>
+            <a class="nome" href="prodotto.html?p=${product.nome}">
+              <p class="nome">${product.nome}</p>
+            </a>
+            <b>${product.prezzo.toFixed(2)}€</b>
+            <br>
+            <a class="btn btn-danger">Aggiungi al carrello</a>
+          </div>
+        </div>
+      </div>`;
+    }
+  })
+
+  document.getElementById("rigacontenitore").innerHTML = html;
+};
+
+//scrolltop
+function scrollToTop() {
+  window.scrollTo(0, 0);
+};
+
+//cookie
+document.addEventListener("DOMContentLoaded", function () {
+  var cookieBanner = document.getElementById("cookie-banner");
+  var cookieAccept = document.getElementById("cookie-accept");
+
+  cookieAccept.addEventListener("click", function () {
+    cookieBanner.style.display = "none";
+    localStorage.setItem("cookieConsent", "true");
+  });
+
+  if (!localStorage.getItem("cookieConsent")) {
+    cookieBanner.style.display = "block";
+  }
+});
+
+//home loading
+document.addEventListener("DOMContentLoaded", function () {
+    // home loading
+    var sPath = window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
+    if (sPath=="/")
+      sPage="index.html"
+      
+    if (sPage != "index.html") 
+      return
+
+    // Initialize Swiper
+    var swiper = new Swiper(".mySwiper1", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    // Initialize Swiper2
+    var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination2",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+    });
+
+    // Prodotti dinamici home
+    let html = "";
+    products.forEach((product) => {
+        html += `
+      <div class="swiper-slide img">
+        <div class="card">
+          <img class="card-img-top" alt="place" src=${product.immagine}>
+          <div class="card-body">
+            <a class="nome" href="prodotto.html?p=${product.nome}">
+              <p class="nome">${product.nome}</p>
+            </a>
+            <b>${product.prezzo.toFixed(2)}€</b>
+            <br>
+            <a class="btn btn-danger">Aggiungi al carrello</a>
+          </div>
+        </div>
+      </div>`;
+    });
+    document.getElementById("dinamicihome").innerHTML = html;
+});
+
 //prodotti loading
 document.addEventListener("DOMContentLoaded", function () {
   var Path=window.location.pathname;
@@ -134,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="col-md-6">
           <a class="nome" href="prodotti.html"> <h2  class="mb-4 nome">${product.nome}</h2> </a>
           <p id="story" class="mb-4">${product.descrizione}</p>
-          <h5 class="mb-3">Prezzo:€${product.prezzo.toFixed(2)}</h4>
+          <h5 class="mb-3">Prezzo:€${product.prezzo.toFixed(2)}</h5>
           <form>
             <div class="mb-3">
               <label for="quantita" class="form-label">Quantità:</label>
@@ -148,146 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.getElementById("singolo").innerHTML = html;
 });
-
-
-//pagina contatti
-function handleFormSubmit(event) {
-  event.preventDefault(); // Previeni l'invio del modulo
-  var checkboxChecked = document.getElementById("myCheck").checked;
-
-  if (checkboxChecked) {
-    // Nascondi il modulo di contatto
-    document.getElementById("contact-form").style.display = "none";
-
-    // Mostra il messaggio di conferma
-    document.getElementById("confirmation-message").style.display = "block";
-  }
-}
-if (document.getElementById("contact-form") != null) {
-  document.getElementById("contact-form").addEventListener("submit", handleFormSubmit);
-}
-// filtro
-if (document.getElementById("priceRange") != null) {
-  var priceRange = document.getElementById("priceRange");
-  var priceDisplay = document.getElementById("priceDisplay");
-
-  priceRange.oninput = function () {
-    priceDisplay.innerHTML = "€" + priceRange.value;
-  };
-}
-
-function filterProducts() {
-  var selectedCategory = document.getElementById("categoryDropdown").value;
-  var priceRangeValue = document.getElementById("priceRange").value;
-// prodotti dinamici
-  let html = "";
-  products.forEach((product) => {
-    console.log(selectedCategory);
-    if (
-      product.prezzo <= parseInt(priceRangeValue) &&
-      (product.categoria == selectedCategory || selectedCategory == "tutti")
-    ) {
-      html += `
-      <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
-        <div class="product ${product.categoria}" data-price="${product.prezzo}">
-          <img class="prodottoimg" alt="place" src="${product.immagine}">
-          <div>
-            <a class="nome" href="prodotto.html?p=${product.nome}">
-              <p class="nome">${product.nome}</p>
-            </a>
-            <b>${product.prezzo.toFixed(2)}€</b>
-            <br>
-            <a class="btn btn-danger">Aggiungi al carrello</a>
-          </div>
-        </div>
-      </div>`;
-    }
-  })
-
-  document.getElementById("rigacontenitore").innerHTML = html;
-}
-
-//scrolltop
-function scrollToTop() {
-  window.scrollTo(0, 0);
-}
-//cookie
-document.addEventListener("DOMContentLoaded", function () {
-  var cookieBanner = document.getElementById("cookie-banner");
-  var cookieAccept = document.getElementById("cookie-accept");
-
-  cookieAccept.addEventListener("click", function () {
-    cookieBanner.style.display = "none";
-    localStorage.setItem("cookieConsent", "true");
-  });
-
-  if (!localStorage.getItem("cookieConsent")) {
-    cookieBanner.style.display = "block";
-  }
-});
-
-// home loading
-var sPath = window.location.pathname;
-var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
-if (sPage == "index.html") {
-  // Initialize Swiper
-  var swiper = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  // Initialize Swiper2
-  var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination2",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-    },
-  });
-
-  // Prodotti dinamici home
-  let html = "";
-  products.forEach((product) => {
-    html += `
-      <div class="swiper-slide img">
-        <div class="card">
-          <img class="card-img-top" alt="place" src=${product.immagine}>
-          <div class="card-body">
-            <a class="nome" href="prodotto.html?p=${product.nome}">
-              <p class="nome">${product.nome}</p>
-            </a>
-            <b>${product.prezzo.toFixed(2)}€</b>
-            <br>
-            <a class="btn btn-danger">Aggiungi al carrello</a>
-          </div>
-        </div>
-      </div>`;
-  });
-  document.getElementById("dinamicihome").innerHTML = html;
-}
 
 //carrello
 function calculateTotal() {
@@ -314,7 +323,8 @@ function calculateTotal() {
     var totalAmount = total + shippingCost;
     totalAmountElement.textContent = "€" + totalAmount.toFixed(2);
   }
-}
+};
+
 function removeProduct(event) {
   var card = event.target.closest(".card");
   card.remove();
@@ -328,4 +338,4 @@ function removeProduct(event) {
     shippingCostElement.innerHTML = "€0,00";
     totalAmountElement.innerHTML = "€0,00";
   }
-}
+};
