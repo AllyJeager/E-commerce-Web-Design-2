@@ -230,7 +230,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var Path=window.location.pathname;
   var Page = Path.substring(Path.lastIndexOf("/") + 1);
   var Search =window.location.search
-  var Query = Search.substring(Search.lastIndexOf("?s=") + 3);
+  var QueryEncoded = Search.substring(Search.lastIndexOf("?s=") + 3);
+  var Query = decodeURI(QueryEncoded)
 
   if(Page!="prodotti.html" && Query=="")
     return;
