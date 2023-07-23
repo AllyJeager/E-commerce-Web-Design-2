@@ -455,11 +455,17 @@ La funzione `removeProduct(event)` viene utilizzata per rimuovere il prodotto da
 ![width:900px](mockup.png)
 
 ---
-## Analisi [GTmetrix](https://swiperjs.com/demos)
+## Analisi [GTmetrix](https://gtmetrix.com/)
 ![width:750px](gtmetrix1.png)
 ![height:150px](gtmetrix2.png)
 
 ---
+## Analisi [SEOptimer](https://www.seoptimer.com/)
+![width:950px](seo.png)
+
+
+---
+
 # Grazie per l'attenzione
 Alessia Colpo
 
