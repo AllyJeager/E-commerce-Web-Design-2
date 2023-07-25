@@ -35,8 +35,7 @@ Ho usato il _code editor_ **Visual Studio Code**, clonando il mio repository di 
 ![bg right:33% width:300px](bootstrap.png)
 # Librerie
 ## Bootstrap
-Bootstrap è una libreria di strumenti liberi per la creazione di siti e applicazioni per il Web. Essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell'interfaccia, come moduli, pulsanti e navigazione, così come alcune estensioni opzionali di JavaScript.
-google material icons
+**Bootstrap** è una libreria di **strumenti liberi per la creazione di siti e applicazioni per il Web**. Essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell'interfaccia, come moduli, pulsanti e navigazione, così come alcune estensioni opzionali di JavaScript.
 
 ---
 ![bg right:33% width:300px](googlefonts.png)
@@ -141,16 +140,9 @@ Ogni sito al giorno d'oggi ha l’obbligo di informare gli utenti sulla raccolta
 </div>
 ```
 Per accedere alla cookie policy completa basta cliccare su **Maggiori informazioni** e si verrà portati nella pagina **cookie.html**
-#### Funzione JS:
-```js
-document.addEventListener("DOMContentLoaded", function () {
-    var cookieBanner = document.getElementById("cookie-banner");
-    var cookieAccept = document.getElementById("cookie-accept");
-```
-Questa parte di codice ottiene i riferimenti agli elementi HTML del banner dei cookie e li assegna a delle variabili.
 
 ---
-#### Gestore di eventi e funzione di callback:
+#### Funzione JS:
 ```js
     cookieAccept.addEventListener("click", function () {
         cookieBanner.style.display = "none";
@@ -280,7 +272,7 @@ function handleFormSubmit(event) {
   event.preventDefault();
   var checkboxChecked = document.getElementById("myCheck").checked;
 ```
-Questo primo blocco di codice **impedisce il comportamento predefinito dell'evento di submit del modulo** e seleziona l'elemento con l'**ID "myCheck"** accedendo alla proprietà checked del suddetto. La proprietà checked restituisce un valore booleano che indica se la casella di controllo è selezionata o meno. Questo valore viene assegnato alla variabile checkboxChecked, che verrà utilizzata nella riga successiva per prendere decisioni in base allo stato della casella di controllo.
+Questo primo blocco di codice **impedisce il comportamento predefinito dell'evento di submit del modulo** e seleziona l'elemento con l'**ID "myCheck"** accedendo alla proprietà checked del suddetto per capire se la casella di controllo è selezionata o meno. 
 
 ---
 ### Messaggio di conferma
@@ -298,34 +290,12 @@ Questa parte di codice verrà **eseguita solo se la casella di controllo è sele
 Se è selezionata il contact-form verrà nascosto (display="none") e verrà mostrato l'elemento con ID "confirmation-message" cambiando il suo diplay da **none** a **block**
 
 ---
-```js
-if (document.getElementById("contact-form") != null) {
-  document.getElementById("contact-form").addEventListener("submit", handleFormSubmit);
-}
-```
-Qui viene verificata l'esistenza di un elemento con l'ID "contact-form" e, se esiste, viene aggiunto un **event listener per l'evento di submit** su quell'elemento. Quando viene inviato il modulo associato a "contact-form", la funzione handleFormSubmit viene eseguita per gestire l'evento di submit e eseguire le azioni desiderate.
-
----
 ![bg right:45% width:600px](filtromockup.png)
 ## Prodotti
 La pagina dei prodotti come nella home è resa **dinamica attraverso un array di prodotti** che permette di **generare codice HTML per ogni prodotto**, inserito all'interno di un elemento specifico (determinato da un ID) nel documento HTML.
 Inoltre è presente un **filtro dei prodotti** in base a:
 - Categoria
 - Intervallo di prezzo selezionati
-
----
-#### Price Range
-```js
-if (document.getElementById("priceRange") != null) {
-  var priceRange = document.getElementById("priceRange");
-  var priceDisplay = document.getElementById("priceDisplay");
-
-  priceRange.oninput = function () {
-    priceDisplay.innerHTML = "€" + priceRange.value;
-  };
-}
-```
-Se esiste l'elemento con ID "priceRange" esso viene assegnato a due variabili: priceRange e priceDisplay.  Successivamente, viene definito un **event handler** per l'evento **"input"** del campo **priceRange**. Quando viene modificato il valore del campo, la funzione associata viene eseguita e imposta il **testo dell'elemento priceDisplay** al **valore del campo priceRange**, aggiungendo il simbolo "€".
 
 ---
 #### Filtro prodotti
@@ -339,59 +309,9 @@ function filterProducts() {
 Questa parte contiene la funzione filterProducts, che viene chiamata per filtrare i prodotti in base alla categoria e all'intervallo di prezzo. Viene creato un **ciclo forEach** per iterare attraverso ogni prodotto nell'array products.
 
 ---
-```js
-  {
-    console.log(selectedCategory);
-    if (
-      product.prezzo <= parseInt(priceRangeValue) &&
-      (product.categoria == selectedCategory || selectedCategory == "tutti")
-    ) {
-      html += `
-      <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
-     ...
-      </div>`;
-    }
-  })
-  document.getElementById("rigacontenitore").innerHTML = html;
-}
-```
- Se la categoria e l'intervallo di prezzo dei prodotti corrispondono a quelli selezionati viene generato un blocco HTML all'interno dell'elemento con l'ID "rigacontenitore".
-
----
 ![bg right:45% width:650px](singolo.png)
 ## Prodotto Singolo
-La generazione di questa pagina è resa dinamica utilizzando sempre l'esitenza dell'array globale con i prodotti
-
----
-
-```js
-document.addEventListener("DOMContentLoaded", function () {
-  var Path=window.location.pathname;
-  var Page = Path.substring(Path.lastIndexOf("/") + 1);
-  var Search = window.location.search
-  var Query = Search.substring(Search.lastIndexOf("?p=") + 3);
-    if(Page!="prodotto.html" && Query=="")
-    return;
-
-```
-Viene definita una funzione che verrà eseguita al completo caricamento della pagina HTML. 
-La funzione estrae il nome del file HTML corrente nella variabile "Page" e il valore del parametro "p" dall'URL nella variabile "Query". Queste informazioni potrebbero essere utilizzate per eseguire azioni specifiche.
-
----
-```js
-  let html="";
-  products.forEach((product) => {
-    if (product.nome.toLowerCase()== decodeURIComponent(Query).toLowerCase()) {
-      html += `
-      <div class="row">
-     ...
-      </div>`;
-    }
-  });
-  document.getElementById("singolo").innerHTML = html;
-});
-```
-Il codice dopo aver generato del markup HTML dinamicamente in base ai prodotti presenti nell'array products e al valore del parametro "p" nell'URL lo inserisce all'interno dell'elemento con l'ID "singolo" nella pagina HTML.
+La **generazione** di questa pagina è resa **dinamica** utilizzando l'array con i prodotti
 
 ---
 ![bg right:30% width:650px](carrellomockup1.png)
@@ -416,18 +336,18 @@ Inizialmente controlla se tutti gli elementi necessari sono presenti sulla pagin
 ---
 ![bg right:30% width:650px](carrellomockup2.png)
 Se tutti gli elementi sono presenti:
-- Ottiene il **prezzo del prodotto dalla stringa contenuta in priceElement**, rimuovendo tutti i caratteri non numerici e mantenendo solo le cifre e i separatori decimali e lo assegna alla variabile **price**
-- Ottiene la **quantità** del prodotto dal **campo di input in quantityElement** e la converte in un numero intero che assegna alla variabile quantity.
-- Calcola il **totale moltiplicando il prezzo per la quantità** e assegna il risultato alla variabile total.
+- Ottiene il **prezzo del prodotto** dalla stringa **priceElement** assegnandolo alla variabile **price**
+- Ottiene la **quantità** del prodotto dal **campo di input in quantityElement**.
+- Calcola il **totale moltiplicando il prezzo per la quantità** e assegna il risultato alla **variabile total**.
 ```js
  var total = price * quantity;
  ```
 ---
 ![bg right:30% width:650px](carrellomockup4.png)
 A questo punto:
-- Aggiorna il contenuto dei vari elementi HTML con i prezzi finali formattati con due decimali.
-- Imposta il costo di spedizione 
-- Calcola l'**importo totale** sommando il **totale del prodotto al costo di spedizione** e assegna il risultato alla variabile totalAmount.
+- Aggiorna il contenuto dei vari elementi HTML con i prezzi finali.
+- Si imposta il costo di spedizione
+- Calcola l'**importo totale** sommando il **totale del prodotto al costo di spedizione** e assegna il risultato alla **variabile totalAmount**.
 
 ---
 ![bg right:30% width:650px](carrellomockup3.png)
@@ -468,5 +388,3 @@ La funzione `removeProduct(event)` viene utilizzata per rimuovere il prodotto da
 
 # Grazie per l'attenzione
 Alessia Colpo
-
-
